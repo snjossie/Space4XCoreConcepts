@@ -1,8 +1,9 @@
 ﻿using System.Collections.Generic;
+using Space4XCoreConcepts.GameGeneral;
 
 namespace Space4XCoreConcepts
 {
-    public class TechArea 
+    public class TechArea : IProgressable
     {
         public ISet<TechArea> Parents { get; set; }
 
@@ -12,5 +13,6 @@ namespace Space4XCoreConcepts
 
         public int ResearchPointsRequired { get; set; }
 
+        public float PointsRequired { get; set; }
     }
 }

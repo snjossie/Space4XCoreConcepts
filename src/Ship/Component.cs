@@ -9,16 +9,10 @@ namespace Space4XCoreConcepts
 
         public ISet<Attribute> Attributes { get; set; } = new HashSet<Attribute>();
 
-        public ISet<TechArea> ResearchRequrements { get; set; } = new HashSet<TechArea>();
+        public ISet<TechArea> ResearchRequirements { get; set; } = new HashSet<TechArea>();
 
-        public float ShieldsGenerated
-        {
-            get { return Attributes.Where(a => a.Kind == AttributeKind.Shield).Sum(a => a.Value); }
-        }
+        public float ShieldsGenerated => Attributes.Where(a => a.Kind == AttributeKind.Shield).SumOrDefault(a => a.Value);
 
-        public float ThrustGenerated 
-        {
-            get { return Attributes.Where(a => a.Kind == AttributeKind.Engine).Sum(a => a.Value); }
-        }
+        public float ThrustGenerated => Attributes.Where(a => a.Kind == AttributeKind.Engine).SumOrDefault(a => a.Value);
     }
 }

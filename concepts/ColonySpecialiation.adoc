@@ -1,9 +1,0 @@
-= Colony Specialization
-
-|===
-|                3+^| Bonuses 
-| Specialization ^| Research ^| Resources ^| Construction 
-| Research       ^| +10%     ^| -5%       ^| -5%
-| Resources      ^| -5%      ^| +10%      ^| -5%
-| Construction   ^| -5%      ^| -5%       ^| +10%
-|===
