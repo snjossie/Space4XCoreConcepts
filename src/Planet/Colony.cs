@@ -6,6 +6,8 @@ namespace Space4XCoreConcepts
     {
         public ICollection<Facility> Facilities { get; set; }
 
+        public Queue<ConstructionItem<Facility>> ConstructionQueue { get; set; }
+
         public string Name { get; set; }
 
         public FacilitySpecialization Specialization { get; set; }

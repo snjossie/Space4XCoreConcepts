@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 
 namespace Space4XCoreConcepts
 {
@@ -6,9 +7,16 @@ namespace Space4XCoreConcepts
     {
         static void Main(string[] args)
         {
-            Race race = new Race { Name = "A new race" };
+            var shieldComponent = new Component();
+            shieldComponent.Name = "Shield Generator I";
+            shieldComponent.Attributes.Add(new Attribute { Value = 300f, Kind = AttributeKind.Shield });
 
-            Console.WriteLine(race.Name);
+            var engineComponent = new Component(); 
+            engineComponent.Name = "Ion Engine I";
+            engineComponent.Attributes.Add(new Attribute { Value = 10f, Kind = AttributeKind.Engine });
+
+            Console.WriteLine($"Component '{shieldComponent.Name}' generates {shieldComponent.ShieldsGenerated} points of shielding");
+            Console.WriteLine($"Component '{engineComponent.Name}' generates {engineComponent.ThrustGenerated} points of thrust");
         }
     }
 }

@@ -17,10 +17,10 @@ namespace Space4XCoreConcepts
         {
             get
             {
-                var researchBonus = Attributes.Where(a => a.AttributeKind == AttributeKind.ResearchBonus)
+                var researchBonus = Attributes.Where(a => a.Kind == AttributeKind.ResearchBonus)
                     .Sum(a => a.Value);
 
-                var researchPoints = Attributes.Where(a => a.AttributeKind == AttributeKind.ResearchPointGenerator)
+                var researchPoints = Attributes.Where(a => a.Kind == AttributeKind.ResearchPointGenerator)
                     .Sum(a => a.Value);
 
                 return (int)(researchBonus * researchPoints);
